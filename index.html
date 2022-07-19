@@ -20,10 +20,20 @@
         <img src="Logo.png" alt="pic" class="logopic">
     </div>
     <div class="search-result" id="search-result">
-      <img src="logo.png" alt="logo pic" >
-      <h1>Similar accounts</h1>
-      <h2 id="name">Company Name</h2>
-      <h3 id="website">compant website</h3>
+      <div class="color" id="color">
+        <h1 id="colorh"></h1>
+      </div>
+      <h1 class="acc">Similar accounts</h1>
+      <h2 id="name"></h2>
+      <h3 id="website"></h3>
+      <div class="track" id="track">
+        <img src="spinner.png" alt="spinnerpic" id="spinner">
+        <h1 id="trackh">Track</h1>
+      </div>
+      <h1 class="quick">Quick Actions</h1>
+      <h2 class="tracknew">Track new account</h2>
+      <h2 class="bulk">Bulk track accounts</h2>
+      <h2 class="manage">Manage accounts</h2>
     </div>
     <div class="api"><div class="apii"></div></div>
     <div class="sidebar">
@@ -100,10 +110,19 @@
       let herosection = document.getElementById("herosection");
       let value=document.getElementById('inputtext');
       let searchresult = document.getElementById("search-result");
+      let logo=document.getElementById('logo');
+      let color=document.getElementById('color');
+      let colorh=document.getElementById('colorh');
+      let track=document.getElementById('track');
+      let trackh=document.getElementById('trackh');
+      let spinner=document.getElementById('spinner');
       value.onclick = () =>{
         herosection.style.visibility = "hidden";
         searchpic.style.visibility = "hidden";
         closepic.style.visibility = "visible";
+        searchresult.style.visibility = "visible";
+        track.style.visibility = "hidden";
+
       }
       users=[];
       console.log(users)
@@ -113,13 +132,43 @@
         searchpic.style.visibility = "hidden";
         closepic.style.visibility = "visible";
         searchresult.style.visibility = "visible";
+        track.style.visibility = "hidden";
       }
       closepic.onclick = () => {
         searchpic.style.visibility = "visible";
         herosection.style.visibility = "visible";
         closepic.style.visibility = "hidden";
         searchresult.style.visibility = "hidden";
+        value.value = ""
+        color.style = ""
+        name.innerText = "";
+        website.innerText = "";
+        colorh.style.visibility = "hidden";
+        track.style.visibility = "hidden";
+        trackh.innerText ="Track";
+        track.style.width = "53px";
+        trackh.style.left = "10px";
+        spinner.style.visibility = "hidden";
+        trackh.style.color = "#FF6059";
+        track.style.border = "1px solid #FF6059"
       }
+      /*track.onclick = () =>{
+        track.style.width = "74px";
+        trackh.style.left = "33px";
+        spinner.style.visibility = "visible";
+        setTimeout(() => {
+          trackh.innerText = "Tracking";
+          spinner.style.visibility = "hidden";
+          trackh.style.left = "12.5px";
+          trackh.style.color = "#1AAB2B";
+          track.style.border = "1px solid rgba(26, 171, 43, 1)"
+          track.onclick = () =>{
+            console.log(values.company)
+            console.log(values.slug)
+            console.log(get.Date(),get.Hours(),get.Minutes())
+          }
+        }, 1000);
+      }*/
       /*value.addEventListener("keypress",()=>{
         let inputvalue = value.value.toUpperCase()
         console.log(inputvalue)
@@ -130,27 +179,48 @@
         })
       })*/
       fetch('https://tva.staging.b2brain.com/search/autocomplete_org_all/').then((data)=>{
-        console.log(data)
+        /*console.log(data)*/
         return data.json();
       }).then((objectdata)=>{
         let apidata ="" ;
         users=objectdata.map((values)=>{
           value.addEventListener("keypress",()=>{
+            track.style.visibility = "visible";
         let inputvalue = value.value.toUpperCase();
-        if(values.location.name.toUpperCase().includes(inputvalue)){
-          console.log(values.location.name)
+        colorh.style.visibility = "visible";
+        if(values.location.name.toUpperCase().includes(inputvalue) || values.website.toUpperCase().includes(inputvalue)){
+          /*console.log(values.location.name)*/
           if(values.logo == "") {
-             console.log("kuch n h")
+             
+             color.style.visibility = "visible";
+             color.style.backgroundColor = values.color;
           }
           else{console.log(values.logo)}
-          
-          console.log(values.website)
-          name.innerHTML = values.location.name;
+          track.onclick = () =>{
+        track.style.width = "74px";
+        trackh.style.left = "33px";
+        spinner.style.visibility = "visible";
+        setTimeout(() => {
+          trackh.innerText = "Tracking";
+          spinner.style.visibility = "hidden";
+          trackh.style.left = "12.5px";
+          trackh.style.color = "#1AAB2B";
+          track.style.border = "1px solid rgba(26, 171, 43, 1)"
+          track.onclick = () =>{
+            console.log(values.company)
+            console.log(values.slug)
+            console.log(Date("year, month, day"))
+          }
+        }, 1000);
+      }
+          /*console.log(values.website)*/
+          colorh.innerText = values.company.slice(0, 1);
+          name.innerText = values.company;
           website.innerText = values.website;
         }
         
         })
-        console.log(values.location.name)
+        /*console.log(values.location.name)*/
           /*data=console.log(values.company.toUpperCase())
           data=console.log(values.location.name.toUpperCase())*/
           return{name:values.company, website:values.location.name}
