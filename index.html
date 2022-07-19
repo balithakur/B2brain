@@ -189,7 +189,7 @@
             let inputvalue = value.value.toUpperCase();
             colorh.style.visibility = "visible";
             if(values.location.name.toUpperCase().includes(inputvalue) || values.website.toUpperCase().includes(inputvalue)){
-          /*console.log(values.location.name)*/
+           /*console.log(values.location.name)*/
             if(values.logo == "") {
              
              color.style.visibility = "visible";
@@ -210,15 +210,14 @@
               console.log(values.company)
               console.log(values.slug)
               console.log(Date("year, month, day"))
-              }
+              }                         
             }, 1000);
             }
           /*console.log(values.website)*/
           colorh.innerText = values.company.slice(0, 1);
           name.innerText = values.company;
           website.innerText = values.website;
-        }
-        
+          }
       })
         /*console.log(values.location.name)*/
           /*data=console.log(values.company.toUpperCase())
