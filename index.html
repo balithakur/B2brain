@@ -186,44 +186,44 @@
         users=objectdata.map((values)=>{
           value.addEventListener("keypress",()=>{
             track.style.visibility = "visible";
-        let inputvalue = value.value.toUpperCase();
-        colorh.style.visibility = "visible";
-        if(values.location.name.toUpperCase().includes(inputvalue) || values.website.toUpperCase().includes(inputvalue)){
+            let inputvalue = value.value.toUpperCase();
+            colorh.style.visibility = "visible";
+            if(values.location.name.toUpperCase().includes(inputvalue) || values.website.toUpperCase().includes(inputvalue)){
           /*console.log(values.location.name)*/
-          if(values.logo == "") {
+            if(values.logo == "") {
              
              color.style.visibility = "visible";
              color.style.backgroundColor = values.color;
-          }
-          else{console.log(values.logo)}
-          track.onclick = () =>{
-        track.style.width = "74px";
-        trackh.style.left = "33px";
-        spinner.style.visibility = "visible";
-        setTimeout(() => {
-          trackh.innerText = "Tracking";
-          spinner.style.visibility = "hidden";
-          trackh.style.left = "12.5px";
-          trackh.style.color = "#1AAB2B";
-          track.style.border = "1px solid rgba(26, 171, 43, 1)"
-          track.onclick = () =>{
-            console.log(values.company)
-            console.log(values.slug)
-            console.log(Date("year, month, day"))
-          }
-        }, 1000);
-      }
+            }
+            else{console.log(values.logo)}
+            track.onclick = () =>{
+            track.style.width = "74px";
+            trackh.style.left = "33px";
+            spinner.style.visibility = "visible";
+            setTimeout(() => {
+              trackh.innerText = "Tracking";
+              spinner.style.visibility = "hidden";
+              trackh.style.left = "12.5px";
+              trackh.style.color = "#1AAB2B";
+              track.style.border = "1px solid rgba(26, 171, 43, 1)"
+              track.onclick = () =>{
+              console.log(values.company)
+              console.log(values.slug)
+              console.log(Date("year, month, day"))
+              }
+            }, 1000);
+            }
           /*console.log(values.website)*/
           colorh.innerText = values.company.slice(0, 1);
           name.innerText = values.company;
           website.innerText = values.website;
         }
         
-        })
+      })
         /*console.log(values.location.name)*/
           /*data=console.log(values.company.toUpperCase())
-          data=console.log(values.location.name.toUpperCase())*/
-          return{name:values.company, website:values.location.name}
+          data=console.log(values.location.name.toUpperCase())
+          return{name:values.company, website:values.location.name}*/
           /*apidata=`<div class="apii">
                 <h1>${values.company}</h1>
                 <h2>${values.location.name}</h2>
