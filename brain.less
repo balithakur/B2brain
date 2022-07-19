@@ -1,0 +1,556 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.navbar{
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 60px;
+
+    /* Neutral / White
+    transform: matrix(1, 0, 0, -1, 0, 0); */
+
+    background: #FFFFFF;
+    box-shadow: 4px 0px 16px 10px rgba(30, 30, 30, 0.08);
+    &-search{
+        position: absolute;
+        width: 22.26px;
+        height: 22px;
+        left: 263.11px;
+        top: 17px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #000000;
+        opacity: 0.3;
+    }
+    &-close{
+        position: absolute;
+        width: 16px;
+        height: 19px;
+        left: 263.11px;
+        top: 17px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #000000;
+        visibility: hidden;
+        opacity: 0.7;
+    }
+    & input{
+        position: absolute;
+        width: 265.13px;
+        height: 22px;
+        left: 299.54px;
+        top: 17px;
+
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        outline:none;
+        border:0px solid black;
+        /* identical to box height */
+
+
+        color: #000000;
+
+        opacity: 0.3;
+    }
+    &-belldiv{
+        width: 25.3px;
+        height: 25px;
+        position: absolute;
+        left: 94vw;
+        top: 14px;
+
+        background: #EFF3F9;
+        border-radius: 2px;
+        .belpic{
+            position: absolute;
+            left:7.90px;
+            top: 5px;
+            width: 11.13px;
+            height: 12px;
+            /*color: #000000;
+            opacity: 0.5;*/
+        }
+        &-dot{
+            box-sizing: border-box;
+            position: absolute;
+            width: 8.1px;
+            height: 8px;
+            left: 21.25px;
+            top: -3px;
+            background: #F44336;
+            border: 1.6px solid #FFFFFF;
+            border-radius: 40px;
+        }
+    }
+    .logopic{
+        position: absolute;
+        width: 25.3px;
+        height: 25px;
+        left: 97vw;
+        top: 14px;
+    }
+}
+.search-result{
+    background: #F5F5F5;;
+    position: absolute;
+    top:1vh;
+    height:99vh;
+    width:80.7vw;
+    left:18vw;
+    & h1{
+        position: absolute;
+        width: 179px;
+        height: 30px;
+        left: 55px;
+        top: 100px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        /* identical to box height */
+        color: #000000;
+        opacity: 0.5;
+
+    }
+    & img{
+        Width:50px;
+        Height:50px;
+        border-radius: 2px;
+        position: absolute;
+        top:150px;
+        left:55px;
+    }
+    & h2{
+        position: absolute;
+        left: 120px;
+        right: 53.89%;
+        top: 155px;
+        bottom: 42%;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #000000;
+    }
+    & h3{
+        position: absolute;
+        left: 120px;
+        right: 53.89%;
+        top: 178px;
+        bottom: 42%;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #000000;
+        opacity:0.5;
+    }
+}
+.sidebar{
+    width: 239px;
+    height: 1466px;
+    position: fixed;
+    z-index: 999;
+    left:0px;
+    top:0px;
+    /* Neutral / White */
+
+    background: #FFFFFF;
+    box-shadow: 4px 0px 16px rgba(30, 30, 30, 0.08);
+    & img{
+        position: absolute;
+        height: 31px;
+        left: 1.4vw;
+        right: 96.53%;
+        top: 13px;
+        /*box-shadow: 1px 1px 0px rgba(102, 111, 130, 0.175243);*/
+    }
+    & h1{
+        position: absolute;
+        width: 82px;
+        height: 30px;
+        left: 72px;
+        top: 13px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        /* identical to box height */
+        color: #000000;
+    }
+    &-content{
+        height: 90vh;
+        width:18.7vw;
+        position: absolute;
+        top:9vh;
+        .homepic{
+            position: absolute;
+            height: 16px;
+            width: 18px;
+            top:6.5vh;
+            left:1.2vw;
+        }
+        & h2{
+            position: absolute;
+            left: 21.5%;
+            right: 40%;
+            top: 6.5vh;
+            bottom: 0%;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height */
+            color: #000000;
+
+        }
+        .starpic{
+            position: absolute;
+            height: 16px;
+            width: 18px;
+            top:13.5vh;
+            left:1.2vw;
+        }
+        .intels{
+            position: absolute;
+            left: 21.5%;
+            right: 40%;
+            top: 13.5vh;
+            bottom: 0%;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height */
+            color: #000000;
+        }
+        .intelsbtn{
+            position: absolute;
+            width: 57px;
+            height: 16px;
+            left: 12.5vw;
+            top: 13.5vh;
+            background: #FF7474;
+            border-radius: 22px;
+            border:1px solid #FF7474;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 14px;
+            color: #FFFFFF;
+        }
+        .user{
+            position: absolute;
+            height: 16px;
+            width: 14px;
+            top:20.5vh;
+            left:1.2vw;
+        }
+        .leads{
+            position: absolute;
+            left: 21.5%;
+            right: 40%;
+            top: 20.5vh;
+            bottom: 0%;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height */
+            color: #000000;
+        }
+        .leadsbtn{
+            position: absolute;
+            width: 57px;
+            height: 16px;
+            left: 12.5vw;
+            top: 20.5vh;
+            background: #FF7474;
+            border-radius: 22px;
+            border:1px solid #FF7474;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 14px;
+            color: #FFFFFF;
+        }
+        .building{
+            position: absolute;
+            height: 16px;
+            width: 14px;
+            top:27.5vh;
+            left:1.2vw;
+        }
+        .accounts{
+            position: absolute;
+            left: 21.5%;
+            right: 40%;
+            top: 27.5vh;
+            bottom: 0%;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height */
+            color: #000000;
+            &-div{
+                height: 30vh;
+                width:19vw;
+                position: absolute;
+                top:32vh;
+                &-rectangle{
+                    width: 1px;
+                    height: 86px;
+                    background: #DBE0E8;
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                    position: absolute;
+                    left:1.5vw;
+                }
+                .manage{
+                    position: absolute;
+                    left:21.5%;
+                    top:0.5vh;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 209.1%;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+                .track{
+                    position: absolute;
+                    left:21.5%;
+                    top:5vh;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 209.1%;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+                .import{
+                    position: absolute;
+                    left:21.5%;
+                    top:9.5vh;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 209.1%;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+            }
+        }
+        .down{
+            Width:16px;
+            Height:14px;
+            position: absolute;
+            top:27.5vh;
+            left:15.5vw;
+        }
+        .setting{
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            top:48.5vh;
+            left:1.2vw;
+        }
+        .preferences{
+            position: absolute;
+            left: 21.5%;
+            right: 40%;
+            top: 48.5vh;
+            bottom: 0%;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height */
+            color: #000000;
+            &-div{
+                height: 30vh;
+                width:19vw;
+                position: absolute;
+                top:53.3vh;
+                &-rectangle{
+                    width: 1px;
+                    height: 86px;
+                    background: #DBE0E8;
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                    position: absolute;
+                    left:1.5vw;
+                }
+                .focus{
+                    position: absolute;
+                    left:21.5%;
+                    top:0.5vh;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 209.1%;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+                .intel{
+                    position: absolute;
+                    left:21.5%;
+                    top:5vh;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 209.1%;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+                .lead{
+                    position: absolute;
+                    left:21.5%;
+                    top:9.5vh;
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 209.1%;
+                    color: #000000;
+                    opacity: 0.6;
+                }
+            }
+        }
+        .downonclick{
+            Width:16px;
+            Height:14px;
+            position: absolute;
+            top:48.5vh;
+            left:15.5vw;
+        }
+        .uppic{
+            Width:16px;
+            Height:14px;
+            position: absolute;
+            top:48.5vh;
+            left:15.5vw;
+            visibility: hidden;
+        }
+        .lastthree{
+            height:30vh;
+            width:19vw;
+            position: absolute;
+            top:0vh;
+            .link{
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                top:70vh;
+                left:1.2vw;
+            }
+            .integration{
+                position: absolute;
+                left: 21.5%;
+                right: 40%;
+                top: 70vh;
+                bottom: 0%;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                /* identical to box height */
+                color: #000000;
+            }
+            .team{
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                top:77vh;
+                left:1.2vw;
+            }
+            .teams{
+                position: absolute;
+                left: 21.5%;
+                right: 40%;
+                top: 77vh;
+                bottom: 0%;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                /* identical to box height */
+                color: #000000;
+            }
+            .msg{
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                top:84vh;
+                left:1.2vw;
+            }
+            .help{
+                position: absolute;
+                left: 21.5%;
+                right: 40%;
+                top: 84vh;
+                bottom: 0%;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 15px;
+                /* identical to box height */
+                color: #000000;
+            }
+        }
+        
+    }
+}
+.firstpic{
+    position: absolute;
+    width: 85vw;
+    height: 568.53px;
+    left: 13.7vw;
+    top: 60px;
+    
+}
+.secondpic{
+    position: absolute;
+    top:100vh;
+    left:17vw;
+    width: 81.6vw;
+}
+.thirdpic{
+    position: absolute;
+    top:150vh;
+    left:17vw;
+    width: 81.6vw;
+}
+.api{
+    position: absolute;
+    left:50vw;
+    top:50vh;
+    height: 200px;
+    width:200px;
+    z-index: 9999;
+}

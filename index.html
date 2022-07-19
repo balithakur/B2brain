@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karma:wght@300;400&family=Manrope:wght@400;600;700;800&family=Poppins:ital,wght@0,100;0,500;1,500&family=Source+Sans+Pro:ital,wght@0,600;0,700;1,400;1,600&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="brain.css">
+  </head>
+  <body>
+    <div class="navbar">
+        <img src="icons8-search-30.png" alt="search pic" class="navbar-search" id="navbar-search-pic">
+        <img src="times.png" alt ="cross pic" class="navbar-close" id ="navbar-close-pic">
+        <input type="text" placeholder="Search by account name or website" id="inputtext">
+        <div class="navbar-belldiv">
+            <img src="bell.png" alt="bell pic" class="belpic">
+            <div class="navbar-belldiv-dot"></div>
+        </div>
+        <img src="logo.png" alt="pic" class="logopic">
+    </div>
+    <div class="search-result" id="search-result">
+      <img src="logo.png" alt="logo pic" >
+      <h1>Similar accounts</h1>
+      <h2 id="name">Company Name</h2>
+      <h3 id="website">compant website</h3>
+    </div>
+    <div class="api"><div class="apii"></div></div>
+    <div class="sidebar">
+        <img src="shape.png" alt="logo image">
+        <h1>B2Brain</h1>
+        <div class="sidebar-content">
+            <img src="home.png" alt="home pic" class="homepic">
+            <h2>Dashboard</h2>
+            <img src="star (1).png" alt="star pic" class="starpic">
+            <h2 class="intels">Intels</h2>
+            <button class="intelsbtn">4 unread</button>
+            <img src="user (2).png" alt="userpic" class="user">
+            <h2 class="leads">Leads</h2>
+            <button class="leadsbtn">4 unseen</button>
+            <img src="building.png" alt="buildingpic" class="building">
+            <h2 class="accounts">Accounts</h2>
+            <img src="chevron-down.png" alt="downpic" class="down">
+            <div class="accounts-div">
+              <div class="accounts-div-rectangle"></div>
+              <h3 class="manage">Manage all</h3>
+              <h3 class="track">Track new accounts</h3>
+              <h3 class="import">Bulk import</h3>
+            </div>
+            <img src="cog.png" alt="settingpic" class="setting">
+            <h2 class="preferences">Preferences</h2>
+            <img src="chevron-down.png" alt="downpic" class="downonclick" id="downonclick" >
+            <img src="chevron-up.png" alt="Uppic" class="uppic" id="uppic">
+            <div class="preferences-div" id="preferences-div">
+              <div class="preferences-div-rectangle"></div>
+              <h3 class="focus">Product focus</h3>
+              <h3 class="intel">Intel preferences</h3>
+              <h3 class="lead">Lead persona</h3>
+            </div>
+            <div class="lastthree" id="lastthree">
+            <img src="link.png" alt="linkpic" class="link">
+            <h2 class="integration">integrations</h2>
+            <img src="users (1).png" alt="teampic" class="team">
+            <h2 class="teams">Team</h2>
+            <img src="comments-alt.png" alt="msgpic" class="msg">
+            <h2 class="help">Help/Support</h2>
+            </div>
+        </div>
+    </div>
+    <div class="herosection" id="herosection">
+        <img src="hero-image.png" alt="pic" class="firstpic">
+        <img src="Screenshot 2022-07-01 at 1.46.png" alt="pic" class="secondpic">
+        <img src="Screenshot 2022-07-01 at 1.46 (1).png" alt="pic" class="thirdpic">
+    <script>
+      /*crossorigin:true
+      let requirejs = require('requirejs');
+      let cors=require('cors')
+      app.use(cors({origin:"file:///C:/Users/balis/OneDrive/Desktop/b2brain%20assignment/brain.html"}))
+      Header('Access-Control-Allow-Origin:*')*/
+      let name=document.getElementById('name');
+      let website=document.getElementById('website');
+      let downpic=document.getElementById('downonclick');
+      let uppic=document.getElementById('uppic');
+      let preferencesdiv=document.getElementById('preferences-div');
+      let lastthree=document.getElementById('lastthree');
+      downpic.onclick = () => {
+        downpic.style.visibility = "hidden";
+        preferencesdiv.style.visibility = "hidden";
+        uppic.style.visibility = "visible";
+        lastthree.style.top = "-14vh";
+      }
+      uppic.onclick = () => {
+        downpic.style.visibility = "visible";
+        preferencesdiv.style.visibility = "visible";
+        uppic.style.visibility = "hidden";
+        lastthree.style.top = "0vh";
+      }
+      let searchpic=document.getElementById('navbar-search-pic');
+      let closepic=document.getElementById('navbar-close-pic');
+      let herosection = document.getElementById("herosection");
+      let value=document.getElementById('inputtext');
+      let searchresult = document.getElementById("search-result");
+      value.onclick = () =>{
+        herosection.style.visibility = "hidden";
+        searchpic.style.visibility = "hidden";
+        closepic.style.visibility = "visible";
+      }
+      users=[];
+      console.log(users)
+      searchpic.onclick = () => {
+        value.focus();
+        herosection.style.visibility = "hidden";
+        searchpic.style.visibility = "hidden";
+        closepic.style.visibility = "visible";
+        searchresult.style.visibility = "visible";
+      }
+      closepic.onclick = () => {
+        searchpic.style.visibility = "visible";
+        herosection.style.visibility = "visible";
+        closepic.style.visibility = "hidden";
+        searchresult.style.visibility = "hidden";
+      }
+      /*value.addEventListener("keypress",()=>{
+        let inputvalue = value.value.toUpperCase()
+        console.log(inputvalue)
+        users.forEach(user =>{
+          let isvisible = user.company.includes(inputvalue) || user.location.name.includes(inputvalue)
+          user.element.classList.toggle("hide", !isvisible)
+          console.log(isvisible)
+        })
+      })*/
+      fetch('https://tva.staging.b2brain.com/search/autocomplete_org_all/').then((data)=>{
+        console.log(data)
+        return data.json();
+      }).then((objectdata)=>{
+        let apidata ="" ;
+        users=objectdata.map((values)=>{
+          value.addEventListener("keypress",()=>{
+        let inputvalue = value.value.toUpperCase();
+        if(values.location.name.toUpperCase().includes(inputvalue)){
+          console.log(values.location.name)
+          if(values.logo == "") {
+             console.log("kuch n h")
+          }
+          else{console.log(values.logo)}
+          
+          console.log(values.website)
+          name.innerHTML = values.location.name;
+          website.innerText = values.website;
+        }
+        
+        })
+        console.log(values.location.name)
+          /*data=console.log(values.company.toUpperCase())
+          data=console.log(values.location.name.toUpperCase())*/
+          return{name:values.company, website:values.location.name}
+          /*apidata=`<div class="apii">
+                <h1>${values.company}</h1>
+                <h2>${values.location.name}</h2>
+             </div>`
+             document.getElementById("api").innerHTML= apidata;*/
+        })
+      })
+    </script>
+  </body>
+</html>
