@@ -98,13 +98,13 @@
         preferencesdiv.style.visibility = "hidden";
         uppic.style.visibility = "visible";
         lastthree.style.top = "-14vh";
-      }
+      };
       uppic.onclick = () => {
         downpic.style.visibility = "visible";
         preferencesdiv.style.visibility = "visible";
         uppic.style.visibility = "hidden";
         lastthree.style.top = "0vh";
-      }
+      };
       let searchpic=document.getElementById('navbar-search-pic');
       let closepic=document.getElementById('navbar-close-pic');
       let herosection = document.getElementById("herosection");
@@ -123,9 +123,7 @@
         searchresult.style.visibility = "visible";
         track.style.visibility = "hidden";
 
-      }
-      users=[];
-      console.log(users)
+      };
       searchpic.onclick = () => {
         value.focus();
         herosection.style.visibility = "hidden";
@@ -133,7 +131,7 @@
         closepic.style.visibility = "visible";
         searchresult.style.visibility = "visible";
         track.style.visibility = "hidden";
-      }
+      };
       closepic.onclick = () => {
         searchpic.style.visibility = "visible";
         herosection.style.visibility = "visible";
@@ -151,7 +149,7 @@
         spinner.style.visibility = "hidden";
         trackh.style.color = "#FF6059";
         track.style.border = "1px solid #FF6059"
-      }
+      };
       /*track.onclick = () =>{
         track.style.width = "74px";
         trackh.style.left = "33px";
@@ -195,7 +193,9 @@
              color.style.visibility = "visible";
              color.style.backgroundColor = values.color;
             }
-            else{console.log(values.logo)}
+            else{
+              color.style.background = values.logo;
+              console.log(values.logo)}
             track.onclick = () =>{
             track.style.width = "74px";
             trackh.style.left = "33px";
@@ -207,18 +207,18 @@
               trackh.style.color = "#1AAB2B";
               track.style.border = "1px solid rgba(26, 171, 43, 1)"
               track.onclick = () =>{
-              console.log(values.company)
-              console.log(values.slug)
+              console.log("company :",values.company)
+              console.log("slug :",values.slug)
               console.log(Date("year, month, day"))
-              }                         
+              }  ;                       
             }, 1000);
-            }
+            };
           /*console.log(values.website)*/
           colorh.innerText = values.company.slice(0, 1);
           name.innerText = values.company;
           website.innerText = values.website;
-          }
-      })
+            };
+          });
         /*console.log(values.location.name)*/
           /*data=console.log(values.company.toUpperCase())
           data=console.log(values.location.name.toUpperCase())
@@ -228,8 +228,8 @@
                 <h2>${values.location.name}</h2>
              </div>`
              document.getElementById("api").innerHTML= apidata;*/
-        })
-      })
+        });
+      });
     </script>
   </body>
 </html>
