@@ -10,14 +10,14 @@
   </head>
   <body>
     <div class="navbar">
-        <img src="icons8-search-30.png" alt="search pic" class="navbar-search" id="navbar-search-pic">
-        <img src="times.png" alt ="cross pic" class="navbar-close" id ="navbar-close-pic">
+        <img src="images/icons8-search-30.png" alt="search pic" class="navbar-search" id="navbar-search-pic">
+        <img src="images/times.png" alt ="cross pic" class="navbar-close" id ="navbar-close-pic">
         <input type="text" placeholder="Search by account name or website" id="inputtext">
         <div class="navbar-belldiv">
-            <img src="bell.png" alt="bell pic" class="belpic">
+            <img src="images/bell.png" alt="bell pic" class="belpic">
             <div class="navbar-belldiv-dot"></div>
         </div>
-        <img src="Logo.png" alt="pic" class="logopic">
+        <img src="images/Logo.png" alt="pic" class="logopic">
     </div>
     <div class="search-result" id="search-result">
       <div class="color" id="color">
@@ -27,7 +27,7 @@
       <h2 id="name"></h2>
       <h3 id="website"></h3>
       <div class="track" id="track">
-        <img src="spinner.png" alt="spinnerpic" id="spinner">
+        <img src="images/spinner.png" alt="spinnerpic" id="spinner">
         <h1 id="trackh">Track</h1>
       </div>
       <h1 class="quick">Quick Actions</h1>
@@ -37,30 +37,30 @@
     </div>
     <div class="api"><div class="apii"></div></div>
     <div class="sidebar">
-        <img src="Shape.png" alt="logo image">
+        <img src="images/Shape.png" alt="logo image">
         <h1>B2Brain</h1>
         <div class="sidebar-content">
-            <img src="home.png" alt="home pic" class="homepic">
+            <img src="images/home.png" alt="home pic" class="homepic">
             <h2>Dashboard</h2>
-            <img src="star (1).png" alt="star pic" class="starpic">
+            <img src="images/star (1).png" alt="star pic" class="starpic">
             <h2 class="intels">Intels</h2>
             <button class="intelsbtn">4 unread</button>
-            <img src="user (2).png" alt="userpic" class="user">
+            <img src="images/user (2).png" alt="userpic" class="user">
             <h2 class="leads">Leads</h2>
             <button class="leadsbtn">4 unseen</button>
-            <img src="building.png" alt="buildingpic" class="building">
+            <img src="images/building.png" alt="buildingpic" class="building">
             <h2 class="accounts">Accounts</h2>
-            <img src="chevron-down.png" alt="downpic" class="down">
+            <img src="images/chevron-down.png" alt="downpic" class="down">
             <div class="accounts-div">
               <div class="accounts-div-rectangle"></div>
               <h3 class="manage">Manage all</h3>
               <h3 class="track">Track new accounts</h3>
               <h3 class="import">Bulk import</h3>
             </div>
-            <img src="cog.png" alt="settingpic" class="setting">
+            <img src="images/cog.png" alt="settingpic" class="setting">
             <h2 class="preferences">Preferences</h2>
-            <img src="chevron-down.png" alt="downpic" class="downonclick" id="downonclick" >
-            <img src="chevron-up.png" alt="Uppic" class="uppic" id="uppic">
+            <img src="images/chevron-down.png" alt="downpic" class="downonclick" id="downonclick" >
+            <img src="images/chevron-up.png" alt="Uppic" class="uppic" id="uppic">
             <div class="preferences-div" id="preferences-div">
               <div class="preferences-div-rectangle"></div>
               <h3 class="focus">Product focus</h3>
@@ -68,21 +68,21 @@
               <h3 class="lead">Lead persona</h3>
             </div>
             <div class="lastthree" id="lastthree">
-            <img src="link.png" alt="linkpic" class="link">
+            <img src="images/link.png" alt="linkpic" class="link">
             <h2 class="integration">integrations</h2>
-            <img src="users (1).png" alt="teampic" class="team">
+            <img src="images/users (1).png" alt="teampic" class="team">
             <h2 class="teams">Team</h2>
-            <img src="comments-alt.png" alt="msgpic" class="msg">
+            <img src="images/comments-alt.png" alt="msgpic" class="msg">
             <h2 class="help">Help/Support</h2>
             </div>
         </div>
     </div>
     <div class="herosection" id="herosection">
-        <img src="hero-image.png" alt="pic" class="firstpic">
-        <img src="Screenshot 2022-07-01 at 1.46.png" alt="pic" class="secondpic">
-        <img src="Screenshot 2022-07-01 at 1.46 (1).png" alt="pic" class="thirdpic">
-    <script>
-      /*crossorigin:true
+        <img src="images/hero-image.png" alt="pic" class="firstpic">
+        <img src="images/Screenshot 2022-07-01 at 1.46.png" alt="pic" class="secondpic">
+        <img src="images/Screenshot 2022-07-01 at 1.46 (1).png" alt="pic" class="thirdpic">
+        <script>
+          /*crossorigin:true
       let requirejs = require('requirejs');
       let cors=require('cors')
       app.use(cors({origin:"file:///C:/Users/balis/OneDrive/Desktop/b2brain%20assignment/brain.html"}))
@@ -104,7 +104,7 @@
       let uppic=document.getElementById('uppic');
       let preferencesdiv=document.getElementById('preferences-div');
       let lastthree=document.getElementById('lastthree');
-      downpic.onclick = () => {
+      downpic.onclick = ()=>{
         downpic.style.visibility = "hidden";
         preferencesdiv.style.visibility = "hidden";
         uppic.style.visibility = "visible";
@@ -241,6 +241,6 @@
              document.getElementById("api").innerHTML= apidata;*/
         });
       });
-    </script>
+        </script>
   </body>
 </html>
