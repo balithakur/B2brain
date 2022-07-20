@@ -87,6 +87,17 @@
       let cors=require('cors')
       app.use(cors({origin:"file:///C:/Users/balis/OneDrive/Desktop/b2brain%20assignment/brain.html"}))
       Header('Access-Control-Allow-Origin:*')*/
+      let searchpic=document.getElementById('navbar-search-pic');
+      let closepic=document.getElementById('navbar-close-pic');
+      let herosection = document.getElementById("herosection");
+      let value=document.getElementById('inputtext');
+      let searchresult = document.getElementById("search-result");
+      let logo=document.getElementById('logo');
+      let color=document.getElementById('color');
+      let colorh=document.getElementById('colorh');
+      let track=document.getElementById('track');
+      let trackh=document.getElementById('trackh');
+      let spinner=document.getElementById('spinner');
       let name=document.getElementById('name');
       let website=document.getElementById('website');
       let downpic=document.getElementById('downonclick');
@@ -105,7 +116,7 @@
         uppic.style.visibility = "hidden";
         lastthree.style.top = "0vh";
       };
-      let searchpic=document.getElementById('navbar-search-pic');
+      /*let searchpic=document.getElementById('navbar-search-pic');
       let closepic=document.getElementById('navbar-close-pic');
       let herosection = document.getElementById("herosection");
       let value=document.getElementById('inputtext');
@@ -115,7 +126,7 @@
       let colorh=document.getElementById('colorh');
       let track=document.getElementById('track');
       let trackh=document.getElementById('trackh');
-      let spinner=document.getElementById('spinner');
+      let spinner=document.getElementById('spinner');*/
       value.onclick = () =>{
         herosection.style.visibility = "hidden";
         searchpic.style.visibility = "hidden";
